@@ -1,0 +1,72 @@
+// this test contains code with no errors that exercises all of the name-analysis methods that we wrote for the different AST node
+// Variable declaration (non-struct type)
+int intA;
+int intB;
+bool boolA;
+bool boolB;
+
+//  Struct declaration 
+struct structA {
+	int intA;
+	int intAinStructA;
+	bool boolB;
+	bool boolBinStructA;	
+};
+
+struct structB {
+	int intB;
+	int intBinStructB;
+	struct structA sAinB;
+	bool boolA;
+};
+
+struct structC {
+	struct structB sBinC;
+	int intC;
+};
+
+// Variable declaration (struct type)
+struct structA outSA;
+struct structB outSB;
+struct structB outSC;
+
+// function declaration
+int funA (bool boolA) {
+	int intA;
+	bool boolB;
+	struct structA sA;
+	struct structB sB;
+	struct structC sC;
+	sA = boolA + boolB;
+	sB = intA + boolB * boolA;
+	sB.boolA = boolA;
+	sB.intB = intB;
+	sB.sAinB.intA = intA;
+	sC = intB;
+	sC.sBinC.sAinB.boolBinStructA = intA*intB - boolA && boolB;
+}
+
+void funC () {
+	int intC;
+	bool boolC;
+	if (true <= intC) {
+		while (boolC > intC) {
+			outSA = intC || boolC;
+			cin >> outSC.sBinC.sAinB;
+			cout << boolC;
+			return;
+		} 
+	} else {
+			struct structA inElseSA;
+			if (outSB.boolA < 345) {
+				int intC;
+				return intC+2345;
+			}
+			inElseSA.intA ++;
+			outSC.intC --;
+			outSB = -intC/intB;
+			outSA = !funA() == funA(intA);
+			outSA = funA(boolB) >= 15;		
+	}
+	intC = funC(intC, boolC);
+}

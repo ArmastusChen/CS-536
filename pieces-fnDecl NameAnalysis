@@ -1,0 +1,46 @@
+//fnDecl nameAnalysis
+
+if ( symTab.lookupLocal(funName) != null) { // find function with same name
+	    symTab.addScope(); // add a new hashtable to the front of the symTable list
+	    Iterator itPT = ptList.iterator();
+	    Iterator itPN = pnList.iterator();
+	    try {
+		while (itPT.hasNext()) { // add parameters of this duplicated function into the new symbol table
+		    SemSym ss = new SemSym(itPT.next());
+		    symTab.addDecl(itPN.next(), ss);
+		}
+		// next, add the names declared in the body to the new symbol table
+		myBody.nameAnalysis(symTab);		
+	    } catch (EmptySymTableException ex) {
+		// catch it
+	    } catch (DuplicateSymException ex) {
+		// catch it
+	    }   
+	} else { // not find function with same name
+	    int numParam = ptList.size();
+	    String retType = myType.typeName();
+	    FunSemSym fss = new FunSemSym(numParam, ptList, retType);
+	    try {
+		symTab.addDecl(funName, fss);
+	    } catch (EmptySymTableException ex) {
+		// catch it
+	    } catch (DuplicateSymException ex) {
+		// catch it
+	    }
+	    // add parameters and names declared in function body into a new hashtable
+	    symTab.addScope(); // add a new hashtable to the front of the symTable list
+	    Iterator itPT = ptList.iterator();
+	    Iterator itPN = pnList.iterator();
+	    try {
+		while (itPT.hasNext()) { // add parameters of this duplicated function into the new symbol table
+		    SemSym ss = new SemSym(itPT.next());
+		    symTab.addDecl(itPN.next(), ss);
+		}
+		// next, add the names declared in the body to the new symbol table
+		myBody.nameAnalysis(symTab);		
+	    } catch (EmptySymTableException ex) {
+		// catch it
+	    } catch (DuplicateSymException ex) {
+		// catch it
+	    }
+	}

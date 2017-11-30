@@ -1,0 +1,132 @@
+int x;
+bool y;
+void a; // 3:6 Non-function declared void
+void x; // 4:6 Non-function declared void  4:6 multiply declared identifier
+int y; // 5:5 Multiply declared identifier
+int a; 
+
+
+struct tryA {int x; int y;};
+struct tryB {int x; int y;};
+
+struct tryB b;
+struct tryB a; // 13:13 Multiply declared identifier
+struct tryC a; // 14:8 Invalid name of struct type 14:13 Multiply declared identifier
+
+
+
+struct a { // 18:8 Multiply declared identifier (conflict with int a, not void a), struct should NOT be added to symbol table
+	int x;
+	bool y;
+	bool x; // 21:7 Multiply declared identifier
+	struct b x; // 22:9 Invalid name of struct type  22:11 Multiply declared identifier
+};
+// the above fields of struct a are all invalid field name (see piazza Mar 20 post "Adding Invalid Struct to SymTable")
+
+struct newa {
+	bool ddd;
+};
+
+struct A { 
+	int A;
+	void A; // 32:7 Non-function declared void  32:7 Multiply declared identifier
+	struct a p; // 33:9 Invalid name of struct type
+	struct newa A; // 34:14 Multiply declared identifier
+	struct newa newId; 
+};
+
+int A; // 38:5 Multiply declared identifier
+
+void B() {
+	int A;
+	void A; // 42:7 Non-function declared void  42:7 Multiply declared identifier
+	struct A a; 
+	struct tryA a; // 44:15 Multiply declared identifier
+	struct A tryA; 
+	struct tryB b;
+	b.x = a.newId.ddd;
+	tryA.A = a.newId;  
+	a.p = z; // 49:4 Invalid struct field name  49:8 Undeclared identifier
+	A.a = A.b; // 50:2 Dot-access of non-struct type  50:8 Dot-access of non-struct type
+	a.newID = 2; // 51:4 Invalid struct field name
+}
+
+struct C {
+	bool cc;
+	struct A aInC;
+};
+void C; // 58:6 Non-function declared void   58:6 Multiply declared identifier
+
+struct B AA; // 60:8 Invalid name of struct type
+struct A AA; 
+struct A C; // 62:10 Multiply declared identifier
+struct C AA; // 63:10 Multiply declared identifier
+struct a AA; // 64:8 Invalid name of struct type  64:10 Multiply declared identifier
+
+int c (int x, bool y, int a) {
+	struct C c;
+	void a; // 68:7 Non-function declared void  68:7 Multiply declared identifier
+	AA.A = a; 
+	AA.A = y;
+	AA.newId.ddd = AA.A;
+	c.aInC.newId.ddd = 6789; 
+	AA.newId = z; // 73:13 Undeclared identifier
+	AA.A.bcd = some11; // 74:5 Invalid struct field name  74:13 Undeclared identifier
+	y = a; 
+	y.g = a.c; // 76:2 Dot-access of non-struct type  76:8 Dot-access of non-struct type
+	a.x = z; // 77:2 Dot-access of non-struct type  77:8 Undeclared identifier
+}
+
+bool c (void a) { // 80:6 Multiply declared identifier  80:11 Non-function declared void
+	if (a == true) { 
+		resultA = c(var1, var2); // 82:3 Undeclared identifier 82:14 Undeclared Identifier 82:21 Undeclared identifier
+	} else {
+		return toRetern; // 84:10 Undeclared identifier
+	}
+	while (AA >= 15) {
+		AA = 10;
+	}
+}
+
+//test recursive call
+void funcD (int funcD) {
+	int a;
+	if(a == 10){}else{}
+	a = funcD.a.b.c; // 94:6 Dot-access of non-struct type
+	AA.A++;
+	funcD = funcD(funcD-100);
+}
+
+struct A AA; // 99:10 Multiply declared identifier
+int funX (bool bA, bool bB, void v1, void v2) { // 100:34 Non-function declared void  100:43 Non-function declared void
+	int Zero; 
+	void Zero; // 102:7 Non-function declared void  102:7 Multiply declared identifier
+	struct C Zero; // 103:11 Multiply declared identifier
+	struct C AA;
+	if (!undecl >= 100) { // 105:7 Undeclared identifier
+		struct A AA;
+		while (AA.nofield.two.three.four == Zero) { //107:13 Invalid struct field name
+			int AA;
+			cin >> AA.A|| AA.nofield; // 109:11 Dot-access of non-struct type  109:18 Dot-access of non-struct type
+			cout << Zero;
+			while (Zeor <= 3+4/5*6) { // 111:11 Undeclared identifier
+				struct C inWhile;
+				inWhile.aInC.newId.ddd = funcD(oneVar, true+inWhile.cc); // 113:36 undeclared variable
+				if (false < 100000) {
+					return;
+				} else {
+					return funcZ()/(funcD()+Zero); // 117:13 Undeclared identifier
+				}
+			}
+		}
+	} else {
+		if (Zero || One && Two || AA) { // 122:15 Undeclared identifier  122:22 Undeclared identifier 
+			Zero = -Zero == 5/(1+6)*AA.cc-AA.aInC.p; // 123:42 Invalid struct field name
+		} else {
+			void illegal; // 125:9 Non-function declared void
+			funcZ(illegal, AA.cc); // 126:4 Undeclared identifier  126:10 undeclared identifier
+		}
+		return;
+	}
+}
+

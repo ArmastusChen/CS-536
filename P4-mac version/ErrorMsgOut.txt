@@ -1,0 +1,66 @@
+3:6  ***ERROR*** Non-function declared void
+4:6  ***ERROR*** Non-function declared void  
+4:6  ***ERROR*** multiply declared identifier
+5:5  ***ERROR*** Multiply declared identifier
+13:13  ***ERROR*** Multiply declared identifier
+14:8  ***ERROR*** Invalid name of struct type 
+14:13  ***ERROR*** Multiply declared identifier
+18:8  ***ERROR*** Multiply declared identifier
+21:7  ***ERROR*** Multiply declared identifier
+22:9  ***ERROR*** Invalid name of struct type  
+22:11  ***ERROR*** Multiply declared identifier
+32:7  ***ERROR*** Non-function declared void  
+32:7  ***ERROR*** Multiply declared identifier
+33:9  ***ERROR*** Invalid name of struct type
+34:14  ***ERROR*** Multiply declared identifier
+38:5  ***ERROR*** Multiply declared identifier
+42:7  ***ERROR*** Non-function declared void  
+42:7  ***ERROR*** Multiply declared identifier
+44:15  ***ERROR*** Multiply declared identifier
+49:4  ***ERROR*** Invalid struct field name  
+49:8  ***ERROR*** Undeclared identifier
+50:2  ***ERROR*** Dot-access of non-struct type  
+50:8  ***ERROR*** Dot-access of non-struct type
+51:4 ***ERROR*** Invalid struct field name
+58:6  ***ERROR*** Non-function declared void   
+58:6  ***ERROR*** Multiply declared identifier
+60:8  ***ERROR*** Invalid name of struct type
+62:10  ***ERROR*** Multiply declared identifier
+63:10  ***ERROR*** Multiply declared identifier
+64:8  ***ERROR*** Invalid name of struct type  
+64:10  ***ERROR*** Multiply declared identifier
+68:7  ***ERROR*** Non-function declared void  
+68:7  ***ERROR*** Multiply declared identifier
+73:13  ***ERROR*** Undeclared identifier
+74:5  ***ERROR*** Invalid struct field name  
+74:13  ***ERROR*** Undeclared identifier
+76:2  ***ERROR*** Dot-access of non-struct type  
+76:8  ***ERROR*** Dot-access of non-struct type
+77:2  ***ERROR*** Dot-access of non-struct type  
+77:8  ***ERROR*** Undeclared identifier
+80:6  ***ERROR*** Multiply declared identifier  
+80:11  ***ERROR*** Non-function declared void
+82:6  ***ERROR*** Undeclared identifier 
+82:18  ***ERROR*** Undeclared Identifier 
+82:24  ***ERROR*** Undeclared identifier
+84:13  ***ERROR*** Undeclared identifier
+94:6  ***ERROR*** Dot-access of non-struct type
+99:10  ***ERROR*** Multiply declared identifier
+100:34  ***ERROR*** Non-function declared void  
+100:43  ***ERROR*** Non-function declared void
+102:7  ***ERROR*** Non-function declared void  
+102:7  ***ERROR*** Multiply declared identifier
+103:11  ***ERROR*** Multiply declared identifier
+105:7  ***ERROR*** Undeclared identifier
+107:13  ***ERROR*** Invalid struct field name
+109:11  ***ERROR*** Dot-access of non-struct type  
+109:18  ***ERROR*** Dot-access of non-struct type
+111:11  ***ERROR*** Undeclared identifier
+113:36  ***ERROR*** Undeclared variable
+117:13  ***ERROR*** Undeclared identifier
+122:15  ***ERROR*** Undeclared identifier  
+122:22  ***ERROR*** Undeclared identifier 
+123:34  ***ERROR*** Invalid struct field name
+125:9  ***ERROR*** Non-function declared void
+126:4  ***ERROR*** Undeclared identifier  
+126:10  ***ERROR*** Undeclared identifier

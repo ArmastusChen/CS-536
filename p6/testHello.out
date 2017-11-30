@@ -1,0 +1,34 @@
+void main(int a(4), bool b(8)) {
+    int aa(-4);
+    bool bb(-8);
+    bb(bool)(-8) = true;
+    aa(int)(-4) = 1;
+    cout << "Hello world!";
+    cout << "\n";
+    if (bb(bool)(-8)) {
+        int aaa(-12);
+        bool bbb(-16);
+        while (bb(bool)(-8)) {
+            int aaaa(-20);
+            if (bb(bool)(-8)) {
+                aaaa(int)(-20) = 1;
+            }
+            else {
+                aaaa(int)(-20) = 2;
+            }
+        }
+    }
+    else {
+        if (bb(bool)(-8)) {
+            int aaaaa(-24);
+            bb(bool)(-8) = false;
+            while (bb(bool)(-8)) {
+                bool bb(-28);
+                bool bbbbbbb(-32);
+                bbbbbbb(bool)(-32) = bb(bool)(-28);
+            }
+        }
+    }
+total num of locals in FnBody: 8
+}
+
